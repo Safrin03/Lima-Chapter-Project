@@ -14,7 +14,7 @@ st.set_page_config(
 
 
 # Dataset
-dataset_url = r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Population.csv"
+dataset_url = r"Datasets/Population.csv"
 
 
 @st.cache_data
@@ -22,7 +22,7 @@ dataset_url = r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Population.cs
 def get_data() -> pd.DataFrame:
     return pd.read_csv(dataset_url)
 
-data = gpd.read_file(r"C:\Users\l\Downloads\Projects\Lima Chapter Project\PER_adm\PER_adm3.shp")
+data = gpd.read_file(r"Datasets/PER_adm3.shp")
 
 df = get_data()
 lima_data = data[data['NAME_1'].isin(['Lima Province'])]
