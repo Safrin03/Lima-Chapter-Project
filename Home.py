@@ -1,7 +1,7 @@
 import streamlit as st
 import plotly.express as px
 import pandas as pd
-import openai
+# import openai
 import geopandas as gpd
 
 
@@ -249,50 +249,50 @@ with col2:
 
 # Chatbox in the sidebar
 ## chatgpt api
-openai.api_key = st.secrets["OPEN_API_KEY"]
-if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-3.5-turbo"
+# openai.api_key = st.secrets["OPEN_API_KEY"]
+# if "openai_model" not in st.session_state:
+#     st.session_state["openai_model"] = "gpt-3.5-turbo"
 
-with st.sidebar:
-    st.write("Get Started: Embark on a journey of discovery. Click, explore, and empower Lima's future with ProsperaLima.")
-    st.sidebar.title("ChatGPT like Clone")
+# with st.sidebar:
+#     st.write("Get Started: Embark on a journey of discovery. Click, explore, and empower Lima's future with ProsperaLima.")
+#     st.sidebar.title("ChatGPT like Clone")
 
-    # with st.expander("Chat with Assistant"):
-    #     with st.chat_message(name="assistant"):
-    #         st.write("Hello!")
+#     # with st.expander("Chat with Assistant"):
+#     #     with st.chat_message(name="assistant"):
+#     #         st.write("Hello!")
 
-    ## Initialize chat history
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
+    # ## Initialize chat history
+    # if "messages" not in st.session_state:
+    #     st.session_state.messages = []
 
-    ## Display chat messages from history on app rerun
-    for message in st.session_state.messages:
-        with st.chat_message(message['role']):
-            st.markdown(message['content'])
+    # ## Display chat messages from history on app rerun
+    # for message in st.session_state.messages:
+    #     with st.chat_message(message['role']):
+    #         st.markdown(message['content'])
 
-    ## React to user input
-    prompt = st.text_input("Hello, Do you have any questions?")
-    if prompt:
-        # Display user message in chat message container
-        with st.chat_message("user"):
-            st.markdown(prompt)
-        # Add user message to chat history
-        st.session_state.messages. append({'role': 'user', 'content': prompt})
+    # ## React to user input
+    # prompt = st.text_input("Hello, Do you have any questions?")
+    # if prompt:
+    #     # Display user message in chat message container
+    #     with st.chat_message("user"):
+    #         st.markdown(prompt)
+    #     # Add user message to chat history
+    #     st.session_state.messages. append({'role': 'user', 'content': prompt})
 
-        with st.chat_message("assistant"):
-            message_placeholder = st.empty()
-            full_response = ""
-            for response in openai.ChatCompletion.create(
-                model=st.session_state["openai_model"],
-                messages=[
-                    {"role": m["role"], "content": m["content"]}
-                    for m in st.session_state.messages
-                ],
-                stream=True,
-            ):
-                full_response += response.choices[0].delta.get("content", "")
-                message_placeholder.markdown(full_response + "┃")
-            message_placeholder.markdown(full_response)
-        st.session_state.messages.append({"role": "assistant", "content": full_response})
+        # with st.chat_message("assistant"):
+        #     message_placeholder = st.empty()
+        #     full_response = ""
+        #     for response in openai.ChatCompletion.create(
+        #         model=st.session_state["openai_model"],
+        #         messages=[
+        #             {"role": m["role"], "content": m["content"]}
+        #             for m in st.session_state.messages
+        #         ],
+        #         stream=True,
+        #     ):
+        #         full_response += response.choices[0].delta.get("content", "")
+        #         message_placeholder.markdown(full_response + "┃")
+        #     message_placeholder.markdown(full_response)
+        # st.session_state.messages.append({"role": "assistant", "content": full_response})
 
 
