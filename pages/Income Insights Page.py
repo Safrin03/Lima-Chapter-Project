@@ -29,6 +29,22 @@ df2 = get_data(file_paths[1])
 df3 = get_data(file_paths[2])
 df = get_data(file_paths[3])
 
+def display_section(Heading,Content):
+    st.markdown(
+        f"""
+        <div style="
+            background-color: #70d1d0;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        ">
+        <h3>{Heading}</h3>
+        <p>{Content}</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
 # Map
 data = gpd.read_file(r"Datasets/PER_adm/PER_adm3.shp")
 lima_data = data[data['NAME_1'].isin(['Lima Province'])]
@@ -36,7 +52,7 @@ df[['1993', '2007', '2017', '2022']] = df[['1993', '2007', '2017', '2022']].repl
 
 
 # creating column
-col1, col2 = st.columns([1, 6])
+col1, col2 = st.columns([2, 8])
 
 # Create a session state
 if "button_state_1" not in st.session_state:
@@ -46,7 +62,11 @@ if "button_state_2" not in st.session_state:
 if "button_state_3" not in st.session_state:
     st.session_state.button_state_3 = False
 
-
+with col1:
+    Obj = "Objective"
+    Cont_1 = 'To gain insights into the revenue collected by the "District Municipality of Santa Juan de Miraflores in Lima Province for the year 2022", ' \
+             '"District Municipality of Santa Anita for the year 2023 (January to May)" and "District Municipality of Pucusana for the year 2022 (Jan to Sept)". By exploring the patterns and details within the dataset, the aim is to better understand the financial dynamics, identify trends, and derive actionable insights to contribute to the improvement of Lima\'s economy and quality of life.'
+    display_section(Obj, Cont_1)
 
 with col2:
     st.title("District Income Insights: Unveiling Lima's Financial Landscape")
