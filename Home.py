@@ -18,7 +18,7 @@ st.set_page_config(
 dataset_url = r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Population.csv"
 
 
-@st.cache_data
+@st.cache
 # read csv from a URL
 def get_data() -> pd.DataFrame:
     return pd.read_csv(dataset_url)
