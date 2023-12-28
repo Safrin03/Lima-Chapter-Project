@@ -72,8 +72,6 @@ gdp_data = {
 # creating column for homepage
 col1, col2 = st.columns([2, 8])
 
-# Tabs for column 2 
-tab1, tab2, tab3, tab4 = st.tabs(["Demographics", "Population", "GDP Contribution", "Social Indicators"])
 
 
 # Create a session state
@@ -180,6 +178,8 @@ with col2:
             values=list(gdp_data.values()),
         )
 
+        # Tabs for column 2 
+        tab1, tab2, tab3, tab4 = st.tabs(["Demographics", "Population", "GDP Contribution", "Social Indicators"])
         
         with tab1:
             st.header("Geographic Distribution of Lima Province")
