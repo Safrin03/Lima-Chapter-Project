@@ -23,9 +23,8 @@ dataset_url = r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Population.cs
 def get_data() -> pd.DataFrame:
     return pd.read_csv(dataset_url)
 
-# data = gpd.read_file(r"C:\Users\l\Downloads\Projects\Lima Chapter Project\PER_adm\PER_adm3.shp")
-# data = gpd.read_file(r"C:\Users\l\Downloads\Projects\Lima Chapter Project\PER_adm\PER_adm3.shp")
-data = gpd.read_file("C:/Users/l/Downloads/Projects/Lima Chapter Project/PER_adm/PER_adm3.shp")
+
+data = gpd.read_file("Datasets/PER_adm/PER_adm3.shpp")
 
 
 df = get_data()
