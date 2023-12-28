@@ -18,7 +18,8 @@ st.set_page_config(
 dataset_url = r"Datasets/Population.csv"
 
 
-@st.cache
+# @st.cache
+@st.cache_data
 # read csv from a URL
 def get_data() -> pd.DataFrame:
     return pd.read_csv(dataset_url)
