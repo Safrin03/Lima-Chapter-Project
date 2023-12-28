@@ -13,7 +13,7 @@ st.set_page_config(
 
 # Define a list of file paths
 file_paths = [
-    r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Data Analysis\Regional Government of Lima\Investment Projects of Lima.csv"
+    r"Datasets/Investment Projects of Lima.csv"
 ]
 
 @st.cache_data
