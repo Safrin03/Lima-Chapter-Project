@@ -110,7 +110,7 @@ with col2:
 
 
     else:
-        tab1, tab2, tab3, tab4 = st.tabs(["San Juan de Miraflores", "Pucusana", "Santa Anita", "Comparative Analysis"])
+        tab1, tab2, tab3 = st.tabs(["San Juan de Miraflores", "Pucusana", "Santa Anita"])
 
         with tab1:
             # 1. Total collected across different concepts (Top Revenue-generating Concepts)
@@ -227,21 +227,4 @@ with col2:
 
 
 
-        with tab4:
-            merged_df = pd.merge(lima_data, df, left_on='NAME_3', right_on='District', how='right')
-            gdf = gpd.GeoDataFrame(merged_df, geometry='geometry_x')
-            geojson_data = gdf.to_crs(epsg=4326).__geo_interface__
-
-            # Create a choropleth map
-            fig_map = px.choropleth_mapbox(
-                df,
-                geojson=geojson_data,
-                locations=df.District,
-                featureidkey="properties.District",
-                color=df["District"],
-                hover_name='District',
-                labels={'District': 'Districts'},
-                mapbox_style="carto-positron",
-                center={"lat": -12.0464, "lon": -77.0428},
-                zoom=7.8,
-            )
+        
