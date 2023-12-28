@@ -1,8 +1,5 @@
 import streamlit as st
-import plotly.express as px
-import pandas as pd
-# import openai
-import geopandas as gpd
+
 
 # Page settings
 st.set_page_config(
@@ -24,7 +21,7 @@ def display_section(title, content, color="#f0f0f0"):
             margin-bottom: 20px;
         ">
             <h3>{title}</h3>
-            {content}
+            <p>{content}</p>
         </div>
         """,
         unsafe_allow_html=True,
@@ -33,6 +30,7 @@ def display_section(title, content, color="#f0f0f0"):
 # Income Insights Section
 income_title = "Income Insights:"
 income_content = """ 
+
 **Key Findings:**
 - San Juan de Miraflores and Pucusana contribute significantly to Lima's revenue.
 - Diverse revenue sources, including property taxes and fines, showcase financial stability.
@@ -42,11 +40,13 @@ income_content = """
 - Implement targeted tax incentives to stimulate economic activities.
 - Strengthen property tax compliance through community engagement and awareness campaigns.
 """
+
 display_section(income_title, income_content, color="#a6d6d6")
 
 # Company Directory Section
 company_title = "Company Directory:"
 company_content = """
+
 **Key Findings:**
 - Manufacturing sector vital for Lima's economy.
 - Concentration of large companies signifies economic robustness.
@@ -62,6 +62,7 @@ display_section(company_title, company_content, color="#f0d6b4")
 # Employment Insights Section
 employment_title = "Employment Insights:"
 employment_content = """ 
+
 **Key Findings:**
 - Informal employment poses a significant challenge, with over 58% of the population engaged in the informal sector.
 - Adequate employment rate but underemployment remains high, especially in the service sector.
@@ -80,6 +81,7 @@ display_section(employment_title, employment_content, color="#e3e3e3")
 # Investment Projects Section
 investment_title = "Investment Projects:"
 investment_content = """
+
 **Key Findings:**
 - Provinces like Huaral, Huaura, and Cañete attract significant investments.
 - Education and agriculture sectors receive notable attention.
@@ -99,6 +101,7 @@ display_section(investment_title, investment_content, color="#c2d8c2")
 # Future Strategies Section
 future_title = "Future Strategies:"
 future_content = """
+
 **Key Insights:**
 - Lima's economic growth is accompanied by challenges, including traffic congestion, air pollution, and social inequality.
 - Continuous improvement culture is crucial for addressing disparities and fostering sustainable development.
@@ -114,7 +117,6 @@ display_section(future_title, future_content, color="#f9e4b7")
 conclusion_title = "Conclusion:"
 conclusion_content = """
 The prosperity of Lima lies in its ability to leverage diverse data insights for informed decision-making. Policymakers and city leaders must focus on fostering collaboration, promoting innovation, and implementing targeted policies to address challenges. By navigating the future with strategic initiatives, Lima can unlock its true potential, leading to a more prosperous and inclusive city.
-
 """
 display_section(conclusion_title, conclusion_content, color="skyblue")
 
