@@ -16,8 +16,8 @@ st.set_page_config(
 
 # Define a list of file paths
 file_paths = [
-    r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Data Analysis\Ministry of Production\Large Companies 2021 (Manufacturing Sector).csv",
-    r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Data Analysis\Ministry of Production\MSME_2020_2021_data.csv"
+    r"Datasets/Large Companies 2021 (Manufacturing Sector).csv",
+    r"Large Files/MSME_2020_2021_data.csv"
 ]
 
 @st.cache_data
