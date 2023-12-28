@@ -13,10 +13,10 @@ st.set_page_config(
 
 # Define a list of file paths
 file_paths = [
-    r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Data Analysis\District Municipality of San Juan de Miraflores\San Juan De Miraflores Income Data 2022.csv",
-    r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Data Analysis\District Municipality of Pucusana\Pucusana District Income Data.csv",
-    r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Data Analysis\District Municipality of Santa Anita\Santa Anita Income data 2023.csv",
-    r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Population.csv"
+    r"Large Files/San Juan De Miraflores Income Data 2022.csv",
+    r"Datasets/Pucusana District Income Data.csv",
+    r"Large Files/Santa Anita Income data 2023.csv",
+    r"Datasets/Population.csv"
 ]
 
 
