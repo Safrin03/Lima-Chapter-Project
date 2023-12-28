@@ -238,22 +238,6 @@ with col2:
             st.write("26.5% of Lima's population lives in poverty \n 2% of Lima's population lives in extreme poverty")
 
 
-        # with data_container:
-        #     button1, expander1 = st.columns(2)
-        #     with button1:
-        #         st.button(button1)
-        #     with expander1:
-        #         st.expander(expander1, use_container_width=True)
-
-
-# Create an Expander to display population information
-# expander1 = st.expander(label="Population Information", expanded=False)
-
-# District_filter = st.selectbox("Select the Province", pd.unique(df["District"]))
-# # creating a single-element container
-# placeholder = st.empty()
-# # dataframe filter
-# df = df[df["District"] == District_filter]
 
 # Chatbox in the sidebar
 ## chatgpt api
@@ -261,8 +245,8 @@ with col2:
 # if "openai_model" not in st.session_state:
 #     st.session_state["openai_model"] = "gpt-3.5-turbo"
 #
-# with st.sidebar:
-#     st.write("Get Started: Embark on a journey of discovery. Click, explore, and empower Lima's future with ProsperaLima.")
+with st.sidebar:
+    st.write("Get Started: Embark on a journey of discovery. Click, explore, and empower Lima's future with ProsperaLima.")
 #     st.sidebar.title("ChatGPT like Clone")
 #
 #     # with st.expander("Chat with Assistant"):
