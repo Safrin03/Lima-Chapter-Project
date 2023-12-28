@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='pydantic<2',
+    name='openai',
     packages = find_packages(),
  
 )
