@@ -5,6 +5,6 @@ setup(
     py_modules=['Home'],
     packages=find_packages(),
     install_requires=[
-        'streamlit'==1.29.0,
+        'streamlit==1.29.0',
     ],
 )
