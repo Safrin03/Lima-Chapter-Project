@@ -3,6 +3,7 @@ import plotly.express as px
 import pandas as pd
 # import openai
 import geopandas as gpd
+# from streamlit.script_runner import RerunData
 
 
 # Page settings
@@ -14,7 +15,7 @@ st.set_page_config(
 
 
 # Dataset
-dataset_url = r"Datasets/Population.csv"
+dataset_url = r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Population.csv"
 
 
 @st.cache_data
@@ -22,7 +23,7 @@ dataset_url = r"Datasets/Population.csv"
 def get_data() -> pd.DataFrame:
     return pd.read_csv(dataset_url)
 
-data = gpd.read_file(r"Datasets/PER_adm3.shp")
+data = gpd.read_file(r"C:\Users\l\Downloads\Projects\Lima Chapter Project\PER_adm\PER_adm3.shp")
 
 df = get_data()
 lima_data = data[data['NAME_1'].isin(['Lima Province'])]
@@ -92,8 +93,9 @@ with col1:
     text2 = "Mission: ProsperaLima's mission is to transform data into actionable insights, fostering positive change, and driving Lima towards new heights of vitality and progress. By tapping into diverse datasets, including economic indicators, population dynamics, and infrastructure projects, we aim to provide a comprehensive understanding of Lima's current landscape and its untapped potential."
     text3 = "Why ProsperaLima? ProsperaLima stands as a beacon for informed decision-making and community engagement. By translating complex data into accessible narratives, we aim to inspire collaborative efforts towards a prosperous, inclusive, and resilient Lima. ProsperaLima is not just a dashboard; it's a dynamic narrative of Lima's evolution towards prosperity."
     text4 = "Join us on this transformative journey as we unlock the true potential of Lima, paving the way for a city that thrives in innovation, equity, and well-being."
-
+    # Render the CSS style
     st.markdown(style, unsafe_allow_html=True)
+
     # Create a rectangle with text inside
     st.markdown(f'<div class="rectangle" style="width:{text1}px; height:auto;">{text1}</div>',
                 unsafe_allow_html=True)
@@ -252,47 +254,47 @@ with col2:
 # openai.api_key = st.secrets["OPEN_API_KEY"]
 # if "openai_model" not in st.session_state:
 #     st.session_state["openai_model"] = "gpt-3.5-turbo"
-
+#
 # with st.sidebar:
 #     st.write("Get Started: Embark on a journey of discovery. Click, explore, and empower Lima's future with ProsperaLima.")
 #     st.sidebar.title("ChatGPT like Clone")
-
+#
 #     # with st.expander("Chat with Assistant"):
 #     #     with st.chat_message(name="assistant"):
 #     #         st.write("Hello!")
-
-    # ## Initialize chat history
-    # if "messages" not in st.session_state:
-    #     st.session_state.messages = []
-
-    # ## Display chat messages from history on app rerun
-    # for message in st.session_state.messages:
-    #     with st.chat_message(message['role']):
-    #         st.markdown(message['content'])
-
-    # ## React to user input
-    # prompt = st.text_input("Hello, Do you have any questions?")
-    # if prompt:
-    #     # Display user message in chat message container
-    #     with st.chat_message("user"):
-    #         st.markdown(prompt)
-    #     # Add user message to chat history
-    #     st.session_state.messages. append({'role': 'user', 'content': prompt})
-
-        # with st.chat_message("assistant"):
-        #     message_placeholder = st.empty()
-        #     full_response = ""
-        #     for response in openai.ChatCompletion.create(
-        #         model=st.session_state["openai_model"],
-        #         messages=[
-        #             {"role": m["role"], "content": m["content"]}
-        #             for m in st.session_state.messages
-        #         ],
-        #         stream=True,
-        #     ):
-        #         full_response += response.choices[0].delta.get("content", "")
-        #         message_placeholder.markdown(full_response + "┃")
-        #     message_placeholder.markdown(full_response)
-        # st.session_state.messages.append({"role": "assistant", "content": full_response})
-
-
+#
+#     ## Initialize chat history
+#     if "messages" not in st.session_state:
+#         st.session_state.messages = []
+#
+#     ## Display chat messages from history on app rerun
+#     for message in st.session_state.messages:
+#         with st.chat_message(message['role']):
+#             st.markdown(message['content'])
+#
+#     ## React to user input
+#     prompt = st.text_input("Hello, Do you have any questions?")
+#     if prompt:
+#         # Display user message in chat message container
+#         with st.chat_message("user"):
+#             st.markdown(prompt)
+#         # Add user message to chat history
+#         st.session_state.messages. append({'role': 'user', 'content': prompt})
+#
+#         with st.chat_message("assistant"):
+#             message_placeholder = st.empty()
+#             full_response = ""
+#             for response in openai.ChatCompletion.create(
+#                 model=st.session_state["openai_model"],
+#                 messages=[
+#                     {"role": m["role"], "content": m["content"]}
+#                     for m in st.session_state.messages
+#                 ],
+#                 stream=True,
+#             ):
+#                 full_response += response.choices[0].delta.get("content", "")
+#                 message_placeholder.markdown(full_response + "┃")
+#             message_placeholder.markdown(full_response)
+#         st.session_state.messages.append({"role": "assistant", "content": full_response})
+#
+#
