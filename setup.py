@@ -1,12 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='LimaChapterAnalysis',
+    name='openai',
     packages = find_packages(),
-     install_requires=[
-        'plotly',
-        'openai',
-        'geopandas',
-       
-    ],
+ 
 )
