@@ -15,7 +15,7 @@ st.set_page_config(
 
 
 # Dataset
-dataset_url = r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Population.csv"
+dataset_url = r"Datasets/Population.csv"
 
 
 @st.cache
@@ -24,7 +24,8 @@ def get_data() -> pd.DataFrame:
     return pd.read_csv(dataset_url)
 
 
-data = gpd.read_file("Datasets/PER_adm/PER_adm3.shpp")
+data = gpd.read_file(r"Datasets/PER_adm/PER_adm3.shp")
+
 
 
 df = get_data()
