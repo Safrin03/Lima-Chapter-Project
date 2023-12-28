@@ -22,7 +22,7 @@ file_paths = [
 
 @st.cache_data
 def get_data(file_path: str) -> pd.DataFrame:
-    return pd.read_csv(file_path)
+    return pd.read_csv(file_path) 
 
 df1 = get_data(file_paths[0])
 df2 = get_data(file_paths[1])
@@ -30,7 +30,7 @@ df3 = get_data(file_paths[2])
 df = get_data(file_paths[3])
 
 # Map
-data = gpd.read_file(r"C:\Users\l\Downloads\Projects\Lima Chapter Project\PER_adm\PER_adm3.shp")
+data = gpd.read_file(r"Datasets/PER_adm/PER_adm3.shp")
 lima_data = data[data['NAME_1'].isin(['Lima Province'])]
 df[['1993', '2007', '2017', '2022']] = df[['1993', '2007', '2017', '2022']].replace({',': ''}, regex=True).astype(int)
 
