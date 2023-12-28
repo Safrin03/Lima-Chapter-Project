@@ -29,6 +29,22 @@ def get_data(file_path: str) -> pd.DataFrame:
 df1 = get_data(file_paths[0])
 df2 = get_data(file_paths[1])
 
+def display_section(Heading,Content):
+    st.markdown(
+        f"""
+        <div style="
+            background-color: #70d1d0;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        ">
+        <h3>{Heading}</h3>
+        <p>{Content}</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
 # Skill sets data
 skill_sets = {
     "##### Manufacture of Plastic Products (ISIC Code: 2520)": [
@@ -66,7 +82,7 @@ skill_sets = {
 
 
 # creating column
-col1, col2 = st.columns([1, 6])
+col1, col2 = st.columns([2, 8])
 
 # Create a session state
 if "button_state_1" not in st.session_state:
@@ -74,8 +90,22 @@ if "button_state_1" not in st.session_state:
 if "button_state_2" not in st.session_state:
     st.session_state.button_state_2 = False
 
+with col1:
+    Obj = "Objective"
+    Cont_1 = "To gain insights into the landscape of Micro, Small, and Medium Enterprises (MSMEs) in Lima, Peru. And to provide a comprehensive directory of large companies operating in the Manufacturing sector in Lima. " \
+             "The goal is to provide actionable insights that can contribute to the improvement of Lima's economy and the overall quality of life for its residents."
+
+    display_section(Obj, Cont_1)
+
+    Header = "MSME - Micro, Small, Medium Enterprises & Large Companies: "
+    Cont_2  = "MSMEs play a significant role in many economies, contributing to job creation, economic growth, and innovation. " \
+           "They often face unique challenges compared to larger corporations, such as access to finance, technology, and markets. " \
+              "However, they also offer several advantages, including agility, flexibility, and a close connection to their communities.\n " \
+              "The Manufacturing companies are identified based on their significant contributions to the Manufacturing GDP and are accredited by the National Superintendence of Customs and Tax Administration (SUNAT)."
+    display_section(Header,Cont_2)
+
 with col2:
-    st.title("Industrial Insights Dashboard: Unveiling Trends in Large Manufacturing and MSME Sectors")
+    st.title("Industrial Insights: Unveiling Trends in Large Manufacturing and MSME Sectors")
 
     # Buttons for Dataset
     button_col1, button_col2 = st.columns(2)
