@@ -13,7 +13,7 @@ st.set_page_config(
 
 # Define a list of file paths
 file_paths = [
-    r"C:\Users\l\Downloads\Projects\Lima Chapter Project\Data Analysis\Ministry of Labor and Employment Promotion\Monthly average of Private sector Workers-2021.csv"
+    r"Datasets/Monthly average of Private sector Workers-2021.csv"
 ]
 
 @st.cache_data
