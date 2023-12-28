@@ -33,7 +33,7 @@ def display_section(Heading,Content):
     st.markdown(
         f"""
         <div style="
-            background-color: #70d1d0;
+            background-color: #448ee4;
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -45,10 +45,6 @@ def display_section(Heading,Content):
         unsafe_allow_html=True,
     )
 
-# Map
-data = gpd.read_file(r"Datasets/PER_adm/PER_adm3.shp")
-lima_data = data[data['NAME_1'].isin(['Lima Province'])]
-df[['1993', '2007', '2017', '2022']] = df[['1993', '2007', '2017', '2022']].replace({',': ''}, regex=True).astype(int)
 
 
 # creating column
