@@ -27,7 +27,7 @@ df = get_data(file_paths[0])
 chunks = []
 num_chunks = 2 
 for i in range(1, num_chunks + 1):
-    chunk_path = f'San Juan De Miraflores_Income_{i}.csv'
+    chunk_path = f'Datasets/San Juan De Miraflores_Income_{i}.csv'
     chunk_df = pd.read_csv(chunk_path)
     chunks.append(chunk_df)
 df1 = pd.concat(chunks, ignore_index=True)
