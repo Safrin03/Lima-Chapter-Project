@@ -17,7 +17,7 @@ st.set_page_config(
 # Define a list of file paths
 file_paths = [
     r"Datasets/Large Companies 2021 (Manufacturing Sector).csv",
-    r"Large Files/MSME_2020_2021_data.csv"
+    # r"Large Files/MSME_2020_2021_data.csv"
 ]
 
 @st.cache_data
@@ -27,7 +27,20 @@ def get_data(file_path: str) -> pd.DataFrame:
 
 
 df1 = get_data(file_paths[0])
-df2 = get_data(file_paths[1])
+# df2 = get_data(file_paths[1]) 
+
+# List to store DataFrames from individual chunks
+chunks = []
+# Number of chunks
+num_chunks = 6  
+# Combine chunks into a single DataFrame
+for i in range(1, num_chunks + 1):
+    chunk_path = f'Datasets/MSME_{i}.csv'
+    chunk_df = pd.read_csv(chunk_path)
+    chunks.append(chunk_df)
+
+# Concatenate all DataFrames
+df2 = pd.concat(chunks, ignore_index=True)
 
 def display_section(Heading,Content):
     st.markdown(
