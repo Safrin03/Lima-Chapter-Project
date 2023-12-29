@@ -194,15 +194,15 @@ with col2:
             st.plotly_chart(fig_top_tax)
 
         with tab3:            
-            # # 1. Top revenue generating concepts
-            # st.subheader("Revenue Distribution")
-            # top_concepts_3 = df3.groupby('CONCEPT')['TOTAL_COLLECTED'].sum().sort_values(ascending=False)
-            # df_top_10 = df3[df3['CONCEPT'].isin(top_concepts_3.index)]
-            # fig_top_concepts_3 = px.bar(df_top_10, x='TOTAL_COLLECTED', y='CONCEPT', labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
-            #                           'CONCEPT': 'Concept'}, title="Revenue Across Top Concepts")
-            # st.plotly_chart(fig_top_concepts_3)
-            # st.write("The top revenue-generating concepts include taxes on non-sporting public spectacles, medical care, garbage collection, parks and gardens, street sweeping, Municipal Security, property tax, administrative control fines, subdivision-related payments, and public cleaning. "
-            #          "These concepts indicate a diverse range of revenue sources, with fines and property-related taxes playing a significant role.")
+            # 1. Top revenue generating concepts
+            st.subheader("Revenue Distribution")
+            top_concepts_3 = df3.groupby('CONCEPT')['TOTAL_COLLECTED'].sum().sort_values(ascending=False)
+            df_top_10 = df3[df3['CONCEPT'].isin(top_concepts_3.index)]
+            fig_top_concepts_3 = px.bar(df_top_10, x='TOTAL_COLLECTED', y='CONCEPT', labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
+                                      'CONCEPT': 'Concept'}, title="Revenue Across Top Concepts")
+            st.plotly_chart(fig_top_concepts_3)
+            st.write("The top revenue-generating concepts include taxes on non-sporting public spectacles, medical care, garbage collection, parks and gardens, street sweeping, Municipal Security, property tax, administrative control fines, subdivision-related payments, and public cleaning. "
+                     "These concepts indicate a diverse range of revenue sources, with fines and property-related taxes playing a significant role.")
             
             # # 2. Distribution for Top Observations
             # top_observations = df3.groupby('OBSERVATIONS')['TOTAL_COLLECTED'].sum().sort_values(ascending=True).head(10)
@@ -210,21 +210,21 @@ with col2:
             # fig_top_observations = px.bar(df_top_observations, x='TOTAL_COLLECTED', y='OBSERVATIONS',labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)', 'OBSERVATIONS': 'Observations'}, title="Revenue Distribution for Top Observations")
             # st.plotly_chart(fig_top_observations)
 
-            # 1. Top revenue-generating concepts
-            st.subheader("Revenue Distribution")
-            top_concepts = df3.groupby('CONCEPT')['TOTAL_COLLECTED'].sum().nlargest(10).sort_values(ascending=False)
-            df_top_concepts = df3[df3['CONCEPT'].isin(top_concepts.index)]
-            fig_top_concepts = px.bar(
-                df_top_concepts, x='TOTAL_COLLECTED', y='CONCEPT',
-                labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)', 'CONCEPT': 'Concept'},
-                title="Revenue Across Top Concepts"
-            )
-            st.plotly_chart(fig_top_concepts)
-            st.write(
-                "The top revenue-generating concepts include taxes on non-sporting public spectacles, medical care, garbage collection, "
-                "parks and gardens, street sweeping, Municipal Security, property tax, administrative control fines, subdivision-related payments, "
-                "and public cleaning. These concepts indicate a diverse range of revenue sources, with fines and property-related taxes playing a significant role."
-            )
+            # # 1. Top revenue-generating concepts
+            # st.subheader("Revenue Distribution")
+            # top_concepts = df3.groupby('CONCEPT')['TOTAL_COLLECTED'].sum().nlargest(10).sort_values(ascending=False)
+            # df_top_concepts = df3[df3['CONCEPT'].isin(top_concepts.index)]
+            # fig_top_concepts = px.bar(
+            #     df_top_concepts, x='TOTAL_COLLECTED', y='CONCEPT',
+            #     labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)', 'CONCEPT': 'Concept'},
+            #     title="Revenue Across Top Concepts"
+            # )
+            # st.plotly_chart(fig_top_concepts)
+            # st.write(
+            #     "The top revenue-generating concepts include taxes on non-sporting public spectacles, medical care, garbage collection, "
+            #     "parks and gardens, street sweeping, Municipal Security, property tax, administrative control fines, subdivision-related payments, "
+            #     "and public cleaning. These concepts indicate a diverse range of revenue sources, with fines and property-related taxes playing a significant role."
+            # )
 
             # 2. Distribution for Top Observations
             st.subheader("Revenue Distribution - Top Observations")
