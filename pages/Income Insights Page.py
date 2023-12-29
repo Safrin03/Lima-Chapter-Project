@@ -50,7 +50,7 @@ def display_section(Heading,Content):
     st.markdown(
         f"""
         <div style="
-            background-color: #448ee4;
+            background-color: #6495ED;
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
