@@ -208,10 +208,10 @@ with col2:
             # 2. Distribution for Top Observations
             top_observations = df3.groupby('OBSERVATIONS')['TOTAL_COLLECTED'].sum().sort_values(ascending=False)
             df_top_observations = df3[df3['OBSERVATIONS'].isin(top_observations.index)]
-            fig_top_concepts_3 = px.bar(df_top_observations, x='TOTAL_COLLECTED', y='OBSERVATIONS',
+            fig_top_obs_3 = px.bar(df_top_observations, x='TOTAL_COLLECTED', y='OBSERVATIONS',
                                         labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
                                                 'OBSERVATIONS': 'Observations'}, title="Revenue Distribution for Top Observations")
-            st.plotly_chart(fig_top_concepts_3)
+            st.plotly_chart(fig_top_obs_3)
 
             # # 3. Total Revenue Collected by Payment Method
             # # 3. Total Revenue Collected by Payment Method
