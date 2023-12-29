@@ -13,7 +13,7 @@ st.set_page_config(
 
 # Define a list of file paths
 file_paths = [
-    r"Datasets/Population.csv"
+    r"Datasets/Population.csv",
     r"Datasets/Pucusana District Income Data.csv"
 ]
 
