@@ -1,2 +1,2 @@
-Large Files/* *.csv filter=lfs diff=lfs merge=lfs -text
+Large Files/*.csv filter=lfs diff=lfs merge=lfs -text
 
