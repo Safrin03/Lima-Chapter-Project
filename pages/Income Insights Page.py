@@ -13,9 +13,6 @@ st.set_page_config(
 
 # Define a list of file paths
 file_paths = [
-    r"Large Files/San Juan De Miraflores Income Data 2022.csv",
-    r"Datasets/Pucusana District Income Data.csv",
-    r"Large Files/Santa Anita Income data 2023.csv",
     r"Datasets/Population.csv"
 ]
 
@@ -24,11 +21,20 @@ file_paths = [
 def get_data(file_path: str) -> pd.DataFrame:
     return pd.read_csv(file_path) 
 
-df1 = get_data(file_paths[0])
-df2 = get_data(file_paths[1])
-df3 = get_data(file_paths[2])
-df = get_data(file_paths[3])
+df = get_data(file_paths[0])
 
+# List to store DataFrames from individual chunks of San Juan de Miraflores
+chunks = []
+num_chunks = 2 
+for i in range(1, num_chunks + 1):
+    chunk_path = f'San Juan De Miraflores_Income_{i}.csv'
+    chunk_df = pd.read_csv(chunk_path)
+    chunks.append(chunk_df)
+df1 = pd.concat(chunks, ignore_index=True)
+
+
+
+# Col1 style 
 def display_section(Heading,Content):
     st.markdown(
         f"""
@@ -44,7 +50,6 @@ def display_section(Heading,Content):
         """,
         unsafe_allow_html=True,
     )
-
 
 
 # creating column
