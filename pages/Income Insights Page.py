@@ -13,7 +13,8 @@ st.set_page_config(
 
 # Define a list of file paths
 file_paths = [
-    r"Datasets/Population.csv"
+    r"Datasets/Population.csv",
+    r"Datasets/Pucusana District Income Data.csv"
 ]
 
 
@@ -22,6 +23,7 @@ def get_data(file_path: str) -> pd.DataFrame:
     return pd.read_csv(file_path) 
 
 df = get_data(file_paths[0])
+df2 = get_data(file_paths[1])
 
 # List to store DataFrames from individual chunks of San Juan de Miraflores
 chunks = []
@@ -31,7 +33,7 @@ for i in range(1, num_chunks + 1):
     chunk_df = pd.read_csv(chunk_path)
     chunks.append(chunk_df)
 df1 = pd.concat(chunks, ignore_index=True)
-df2 = r"Datasets/Pucusana District Income Data.csv"
+
 
 
 # Col1 style 
