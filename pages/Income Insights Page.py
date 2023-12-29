@@ -14,6 +14,7 @@ st.set_page_config(
 # Define a list of file paths
 file_paths = [
     r"Datasets/Population.csv"
+    r"Datasets/Pucusana District Income Data.csv"
 ]
 
 
@@ -22,6 +23,7 @@ def get_data(file_path: str) -> pd.DataFrame:
     return pd.read_csv(file_path) 
 
 df = get_data(file_paths[0])
+df2 = get_data(file_paths[1])
 
 # List to store DataFrames from individual chunks of San Juan de Miraflores
 chunks = []
