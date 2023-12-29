@@ -196,46 +196,44 @@ with col2:
         with tab3:
             # 1. Top revenue generating concepts
             st.subheader("Revenue Distribution")
-            top_concepts_3 = df3.groupby('CONCEPT')['TOTAL_COLLECTED'].sum().nlargest(10).sort_values().index
-            # Filter the DataFrame for the top 10 concepts
-            df_top_10 = df3[df3['CONCEPT'].isin(top_concepts_3)]
-            fig_top_concepts_3 = px.bar(df_top_10, x='TOTAL_COLLECTED', y='CONCEPT', labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
+            top_concepts_3 = df3.groupby('CONCEPT')['TOTAL_COLLECTED'].sum().nlargest(10).sort_values().reset_index()
+            fig_top_concepts_3 = px.bar(top_concepts_3, x='TOTAL_COLLECTED', y='CONCEPT', labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
                                       'CONCEPT': 'Concept'}, title="Revenue Across Top Concepts")
             st.plotly_chart(fig_top_concepts_3)
             st.write("The top revenue-generating concepts include taxes on non-sporting public spectacles, medical care, garbage collection, parks and gardens, street sweeping, Municipal Security, property tax, administrative control fines, subdivision-related payments, and public cleaning. "
                      "These concepts indicate a diverse range of revenue sources, with fines and property-related taxes playing a significant role.")
+            
+            # # 2. Distribution for Top Observations
+            # top_observations = df3.groupby('OBSERVATIONS')['TOTAL_COLLECTED'].sum().sort_values(ascending=False).head(5)
+            # # Filter the DataFrame for the top observations
+            # df_top_observations = df3[df3['OBSERVATIONS'].isin(top_observations.index)]
+            # fig_top_concepts_3 = px.bar(df_top_10, x='TOTAL_COLLECTED', y='OBSERVATIONS',
+            #                             labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
+            #                                     'OBSERVATIONS': 'Observations'}, title="Revenue Distribution for Top Observations")
+            # st.plotly_chart(fig_top_concepts_3)
 
-            # 2. Distribution for Top Observations
-            top_observations = df3.groupby('OBSERVATIONS')['TOTAL_COLLECTED'].sum().sort_values(ascending=False).head(5)
-            # Filter the DataFrame for the top observations
-            df_top_observations = df3[df3['OBSERVATIONS'].isin(top_observations.index)]
-            fig_top_concepts_3 = px.bar(df_top_10, x='TOTAL_COLLECTED', y='OBSERVATIONS',
-                                        labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
-                                                'OBSERVATIONS': 'Observations'}, title="Revenue Distribution for Top Observations")
-            st.plotly_chart(fig_top_concepts_3)
+            # # 3. Total Revenue Collected by Payment Method
+            # # 3. Total Revenue Collected by Payment Method
+            # total_collected_per_payment_method = df3.groupby('PAYMENT_TYPE')['TOTAL_COLLECTED'].sum().reset_index()
 
-            # 3. Total Revenue Collected by Payment Method
-            # 3. Total Revenue Collected by Payment Method
-            total_collected_per_payment_method = df3.groupby('PAYMENT_TYPE')['TOTAL_COLLECTED'].sum().reset_index()
+            # # Create a bar plot using Plotly Express
+            # fig_payment = px.bar(total_collected_per_payment_method, x='PAYMENT_TYPE', y='TOTAL_COLLECTED',
+            #                      title='Total Revenue Collected by Payment Method',
+            #                      labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
+            #                              'PAYMENT_TYPE': 'Payment Method'})
+            # st.plotly_chart(fig_payment)
 
-            # Create a bar plot using Plotly Express
-            fig_payment = px.bar(total_collected_per_payment_method, x='PAYMENT_TYPE', y='TOTAL_COLLECTED',
-                                 title='Total Revenue Collected by Payment Method',
-                                 labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
-                                         'PAYMENT_TYPE': 'Payment Method'})
-            st.plotly_chart(fig_payment)
-
-            # 4. Monthly Trends in Revenue Collection
-            monthly_revenue = df3.groupby(df['CANCEL_DATE'].dt.to_period("M"))['TOTAL_COLLECTED'].sum().reset_index()
-            fig_monthly_trends = px.line(
-                monthly_revenue,
-                x='CANCEL_DATE',
-                y='TOTAL_COLLECTED',
-                markers=True,
-                labels={'TOTAL_COLLECTED': 'Payment Amount (Peruvian Sol)', 'CANCEL_DATE': 'Months(2023)'}
-            )
-            st.subheader("Monthly Trends in Income Collection")
-            st.plotly_chart(fig_monthly_trends)
+            # # 4. Monthly Trends in Revenue Collection
+            # monthly_revenue = df3.groupby(df['CANCEL_DATE'].dt.to_period("M"))['TOTAL_COLLECTED'].sum().reset_index()
+            # fig_monthly_trends = px.line(
+            #     monthly_revenue,
+            #     x='CANCEL_DATE',
+            #     y='TOTAL_COLLECTED',
+            #     markers=True,
+            #     labels={'TOTAL_COLLECTED': 'Payment Amount (Peruvian Sol)', 'CANCEL_DATE': 'Months(2023)'}
+            # )
+            # st.subheader("Monthly Trends in Income Collection")
+            # st.plotly_chart(fig_monthly_trends)
 
 
 
