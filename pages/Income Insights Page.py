@@ -197,7 +197,8 @@ with col2:
             # 1. Top revenue generating concepts
             st.subheader("Revenue Distribution")
             top_concepts_3 = df3.groupby('CONCEPT')['TOTAL_COLLECTED'].sum().nlargest(10).sort_values().reset_index()
-            fig_top_concepts_3 = px.bar(top_concepts_3, x='TOTAL_COLLECTED', y='CONCEPT', labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
+            df_top_10 = df3[df3['CONCEPT'].isin(top_concepts_3)]
+            fig_top_concepts_3 = px.bar(df_top_10, x='TOTAL_COLLECTED', y='CONCEPT', labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
                                       'CONCEPT': 'Concept'}, title="Revenue Across Top Concepts")
             st.plotly_chart(fig_top_concepts_3)
             st.write("The top revenue-generating concepts include taxes on non-sporting public spectacles, medical care, garbage collection, parks and gardens, street sweeping, Municipal Security, property tax, administrative control fines, subdivision-related payments, and public cleaning. "
