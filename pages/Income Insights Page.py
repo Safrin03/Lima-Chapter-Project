@@ -34,6 +34,15 @@ for i in range(1, num_chunks + 1):
     chunks.append(chunk_df)
 df1 = pd.concat(chunks, ignore_index=True)
 
+# List to store DataFrames from individual chunks of Santa Marita
+chunks_ = []
+num_chunks_ = 6  
+for i in range(1, num_chunks_ + 1):
+    chunk_path = f'Datasets/Santa Anita_Income_{i}.csv'
+    chunk_df = pd.read_csv(chunk_path)
+    chunks_.append(chunk_df)
+df3 = pd.concat(chunks_, ignore_index=True)
+
 
 
 # Col1 style 
