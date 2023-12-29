@@ -73,7 +73,8 @@ gdp_data = {
 # creating column for homepage
 col1, col2 = st.columns([2, 8])
 
-
+with st.sidebar:
+    st.write("Get Started: Embark on a journey of discovery. Click, explore, and empower Lima's future with ProsperaLima.")
 
 # Create a session state
 if "button_state" not in st.session_state:
@@ -243,8 +244,6 @@ with col2:
 # if "openai_model" not in st.session_state:
 #     st.session_state["openai_model"] = "gpt-3.5-turbo"
 #
-with st.sidebar:
-    st.write("Get Started: Embark on a journey of discovery. Click, explore, and empower Lima's future with ProsperaLima.")
 #     st.sidebar.title("ChatGPT like Clone")
 #
 #     # with st.expander("Chat with Assistant"):
