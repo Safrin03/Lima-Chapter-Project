@@ -193,73 +193,67 @@ with col2:
             fig_top_obs.update_layout(xaxis_title='Tax Concept', yaxis_title='Number of Occurrences')
             st.plotly_chart(fig_top_tax)
 
-        with tab3:            
+        with tab3:
             # 1. Top revenue generating concepts
             st.subheader("Revenue Distribution")
-            top_concepts_3 = df3.groupby('CONCEPT')['TOTAL_COLLECTED'].sum().sort_values(ascending=False)
-            df_top_10 = df3[df3['CONCEPT'].isin(top_concepts_3.index)]
-            fig_top_concepts_3 = px.bar(df_top_10, x='TOTAL_COLLECTED', y='CONCEPT', labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
+            top_concepts_3 = df3.groupby('CONCEPT')['TOTAL_COLLECTED'].sum().nlargest(10).reset_index()
+            fig_top_concepts_3 = px.bar(top_concepts_3, x='CONCEPT', y='TOTAL_COLLECTED', labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
                                       'CONCEPT': 'Concept'}, title="Revenue Across Top Concepts")
             st.plotly_chart(fig_top_concepts_3)
             st.write("The top revenue-generating concepts include taxes on non-sporting public spectacles, medical care, garbage collection, parks and gardens, street sweeping, Municipal Security, property tax, administrative control fines, subdivision-related payments, and public cleaning. "
-                     "These concepts indicate a diverse range of revenue sources, with fines and property-related taxes playing a significant role.")
+                                 "These concepts indicate a diverse range of revenue sources, with fines and property-related taxes playing a significant role.")
             
-            # # 2. Distribution for Top Observations
-            # top_observations = df3.groupby('OBSERVATIONS')['TOTAL_COLLECTED'].sum().sort_values(ascending=True).head(10)
-            # df_top_observations = df3[df3['OBSERVATIONS'].isin(top_observations.index)]
-            # fig_top_observations = px.bar(df_top_observations, x='TOTAL_COLLECTED', y='OBSERVATIONS',labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)', 'OBSERVATIONS': 'Observations'}, title="Revenue Distribution for Top Observations")
-            # st.plotly_chart(fig_top_observations)
-
-            # # 1. Top revenue-generating concepts
-            # st.subheader("Revenue Distribution")
-            # top_concepts = df3.groupby('CONCEPT')['TOTAL_COLLECTED'].sum().nlargest(10).sort_values(ascending=False)
-            # df_top_concepts = df3[df3['CONCEPT'].isin(top_concepts.index)]
+            # top_10_concepts = df3.groupby('CONCEPT')['TOTAL_COLLECTED'].sum().nlargest(10).sort_values(ascending=False)
+            # df_top_10 = df3[df3['CONCEPT'].isin(top_10_concepts.index)]
             # fig_top_concepts = px.bar(
-            #     df_top_concepts, x='TOTAL_COLLECTED', y='CONCEPT',
+            #     df_top_10,
+            #     x='TOTAL_COLLECTED',
+            #     y='CONCEPT',
             #     labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)', 'CONCEPT': 'Concept'},
-            #     title="Revenue Across Top Concepts"
+            #     title="Top 10 Revenue Generating Concepts",
+            #     orientation='h',
+            #     color='TOTAL_COLLECTED'
             # )
             # st.plotly_chart(fig_top_concepts)
-            # st.write(
-            #     "The top revenue-generating concepts include taxes on non-sporting public spectacles, medical care, garbage collection, "
-            #     "parks and gardens, street sweeping, Municipal Security, property tax, administrative control fines, subdivision-related payments, "
-            #     "and public cleaning. These concepts indicate a diverse range of revenue sources, with fines and property-related taxes playing a significant role."
-            # )
-
-            # 2. Distribution for Top Observations
-            st.subheader("Revenue Distribution - Top Observations")
-            top_observations = df3.groupby('OBSERVATIONS')['TOTAL_COLLECTED'].sum().nlargest(10).sort_values(ascending=True)
-            df_top_observations = df3[df3['OBSERVATIONS'].isin(top_observations.index)]
             
+            # 2. Distribution for Top Observations
+            top_observations = df3.groupby('OBSERVATIONS')['TOTAL_COLLECTED'].sum().sort_values().head(10)
+            df_top_observations = df3[df3['OBSERVATIONS'].isin(top_observations.index)]
             fig_top_observations = px.bar(
-                df_top_observations, x='TOTAL_COLLECTED', y='OBSERVATIONS',
+                df_top_observations,
+                x='TOTAL_COLLECTED',
+                y='OBSERVATIONS',
                 labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)', 'OBSERVATIONS': 'Observations'},
-                title="Revenue Distribution for Top Observations"
+                title="Revenue Distribution for Top Observations",
+                orientation='h',  # Horizontal bar chart
+                color='TOTAL_COLLECTED'  # Color bars based on the total collected amount
             )
             st.plotly_chart(fig_top_observations)
-
-
-
-            # # 3. Total Revenue Collected by Payment Method
-            # total_collected_per_payment_method = df3.groupby('PAYMENT_TYPE')['TOTAL_COLLECTED'].sum().sort_values(ascending=False).reset_index()
-            # fig_payment = px.bar(total_collected_per_payment_method, x='PAYMENT_TYPE', y='TOTAL_COLLECTED',
-            #                      title='Total Revenue Collected by Payment Method',
-            #                      labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
-            #                              'PAYMENT_TYPE': 'Payment Method'})
-            # st.plotly_chart(fig_payment)
-
-            # # 4. Monthly Trends in Revenue Collection
-            # monthly_revenue = df3.groupby(df['CANCEL_DATE'].dt.to_period("M"))['TOTAL_COLLECTED'].sum().reset_index()
-            # fig_monthly_trends = px.line(
-            #     monthly_revenue,
-            #     x='CANCEL_DATE',
-            #     y='TOTAL_COLLECTED',
-            #     markers=True,
-            #     labels={'TOTAL_COLLECTED': 'Payment Amount (Peruvian Sol)', 'CANCEL_DATE': 'Months(2023)'}
-            # )
-            # st.subheader("Monthly Trends in Income Collection")
-            # st.plotly_chart(fig_monthly_trends)
-
-
-
-        
+            st.write("Observations such as 'simple copies', 'additional receipts', and specific references like 'pool universal 19' have minimal impact on revenue, each contributing less than 2% to the total collected amount.")
+            
+            # 3. Total Revenue Collected by Payment Method
+            total_collected_per_payment_method = df3.groupby('PAYMENT_TYPE')['TOTAL_COLLECTED'].sum().sort_values(ascending=False).reset_index()
+            fig_payment = px.bar(total_collected_per_payment_method, x='PAYMENT_TYPE', y='TOTAL_COLLECTED',
+                                 title='Total Revenue Collected by Payment Method',
+                                 labels={'TOTAL_COLLECTED': 'Total Collected Amount (Peruvian Sol)',
+                                         'PAYMENT_TYPE': 'Payment Method'})
+            st.plotly_chart(fig_payment)
+            st.write("The municipality primarily receives revenue through 'TRANSFERS', 'CASH', and credit card payments ('VISA'). While cash transactions are numerous, transfers constitute the highest total revenue.")
+            
+            # 4. Monthly Trends in Revenue Collection
+            df3['CANCEL_DATE'] = pd.to_datetime(df3['CANCEL_DATE'])
+            monthly_revenue = df3.groupby(df3['CANCEL_DATE'].dt.to_period("M"))['TOTAL_COLLECTED'].sum().reset_index()
+            monthly_revenue['CANCEL_DATE'] = monthly_revenue['CANCEL_DATE'].astype(str)
+            fig_monthly_trends = px.line(
+                monthly_revenue,
+                x='CANCEL_DATE',
+                y='TOTAL_COLLECTED',
+                markers=True,
+                labels={'TOTAL_COLLECTED': 'Payment Amount (Peruvian Sol)', 'CANCEL_DATE': 'Months(2023)'}
+            )
+            st.subheader("Monthly Trends in Income Collection")
+            st.plotly_chart(fig_monthly_trends)
+            st.write("Revenue collection shows variations across months, with notable increases in February, April, and May. The municipality collected the highest revenue in April, contributing significantly to the overall trend.")
+            
+            
+             
