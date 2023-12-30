@@ -179,7 +179,7 @@ with col2:
         )
 
         # Tabs for column 2 
-        tab1, tab2, tab3, tab4 = st.tabs(["Demographics", "Population", "GDP Contribution", "Social Indicators"])
+        tab1, tab2, tab3, tab4, tab5 = st.tabs(["Demographics", "Population",  "Economy","GDP Contribution", "Social Indicators"])
         
         with tab1:
             st.header("Geographic Distribution of Lima Province")
@@ -224,6 +224,17 @@ with col2:
             st.write("The population of Lima has more than doubled since 1993, growing from 5.7 million to over 10 million in 2022")
 
         with tab3:
+            st.header("Economy of Lima")
+            st.write("Lima is the industrial and financial center of Peru and a significant financial hub in Latin America.")
+            st.write("Lima's GDP includes significant contributions from the industrial, financial, and retail sectors.")
+            st.write("Lima Stock Exchange experienced remarkable growth.")
+            st.write("The port of Callao facilitates most of the country's imports and exports.")
+            st.write("Lima is a vital financial hub with headquarters of major banks and insurance companies. The financial center is located in the district of San Isidro.")
+            st.write("Rapid growth in disposable income and labor productivity in the service sector.")
+            st.write("Lima Stock Exchange has shown significant growth, with notable increases in 2006 and 2007. In 2006, it became the world's most profitable stock exchange.")
+            st.write("Lima's economic performance significantly influences Peru's overall economic trajectory. The city's industrial, financial, and trade activities play a crucial role in shaping the national economy.")
+
+        with tab4:
             st.header("Lima's Contribution to Peru's GDP")
             st.markdown("Peruvian currency :1 USD = 3.775741 PEN")
             for key, value in gdp_info.items():
@@ -231,7 +242,7 @@ with col2:
             st.plotly_chart(fig_gdp)
             st.write("Lima's GDP includes significant contributions from the industrial, financial, and retail sectors.")
 
-        with tab4:
+        with tab5:
             st.header("Employment:")
             for key, value in employment_info.items():
                 st.write(f"**{key}:** {value}")
@@ -239,7 +250,8 @@ with col2:
             for key, value in salary_info.items():
                 st.write(f"**{key}:** {value}")
             st.header("Poverty:")
-            st.write("26.5% of Lima's population lives in poverty \n 2% of Lima's population lives in extreme poverty")
+            st.write("26.5% of Lima's population lives in poverty") 
+            st.write("2% of Lima's population lives in extreme poverty")
 
 
 
