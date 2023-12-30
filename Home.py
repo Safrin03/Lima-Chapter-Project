@@ -110,8 +110,6 @@ with col1:
                 unsafe_allow_html=True)
     st.markdown(f'<div class="rectangle" style="width:{text3}px; height:auto;">{text3}</div>',
                 unsafe_allow_html=True)
-    st.markdown(f'<div class="rectangle" style="width:{text4}px; height:auto;">{text4}</div>',
-                unsafe_allow_html=True)
 
 with col2:
     st.title("Homepage: Overview of Lima Metropolitan Area ")
@@ -202,6 +200,9 @@ with col2:
             omdena_logo = r"Images/Omdena Logo.jpeg"
             omdena_link = "https://omdena.com/chapter-challenges/analyzing-open-data-to-drive-positive-change-in-lima/#"          
 
+            st.markdown(f'<div class="rectangle" style="width:{text4}px; height:auto;">{text4}</div>',
+                unsafe_allow_html=True)
+            
             logo1, logo2 = st.columns(2)
             with logo1: 
                 st.image(github_logo, width=50, caption="GitHub Logo")
