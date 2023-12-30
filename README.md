@@ -1,4 +1,4 @@
-# "ProsperaLima: Unveiling Economic Insights of Lima Metropolitan Area"
+# "Urban Economic Dynamics: A Comprehensive Analysis of Lima Metropolitan Area"
 
 ### [ProsperaLima Streamlit Web App Dashboard](https://prosperalima-chapter-project-omdena.streamlit.app/) | [Omdena Project Link](https://omdena.com/chapter-challenges/analyzing-open-data-to-drive-positive-change-in-lima/#) | [Google Drive Link to Datasets](https://drive.google.com/drive/folders/1Pfo5VYQxR4gUG3RB4lB8kHdWwMME2awh?usp=drive_link)
 
