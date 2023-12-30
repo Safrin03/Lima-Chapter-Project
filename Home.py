@@ -192,7 +192,7 @@ with col2:
                      "This geographical variety contributes to the province's unique climatic and topographical characteristics.")
 
             # Lima Picture
-            st.image(r"Images/Lima City Picture 2.jpeg", width=500, height=500, caption = "Plaza Mayor de Lima")
+            st.image(r"Images/Lima City Picture 2.jpeg", width=500, use_column_width="auto", caption = "Plaza Mayor de Lima")
             # GitHub Logo
             github_logo = r"Images/Github logo.png"
             github_link="https://github.com/Safrin03/Lima-Chapter-Project"
