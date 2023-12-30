@@ -1,22 +1,22 @@
 # "ProsperaLima: Unveiling Economic Insights of Lima Metropolitan Area"
 
-### [Omdena Project Link](https://omdena.com/chapter-challenges/analyzing-open-data-to-drive-positive-change-in-lima/#) | [Dataset Links to Google Drive](https://drive.google.com/drive/folders/1Pfo5VYQxR4gUG3RB4lB8kHdWwMME2awh?usp=drive_link)
+### [Omdena Project Link](https://omdena.com/chapter-challenges/analyzing-open-data-to-drive-positive-change-in-lima/#) | [Google Drive Link to Datasets](https://drive.google.com/drive/folders/1Pfo5VYQxR4gUG3RB4lB8kHdWwMME2awh?usp=drive_link)
 
 ## Steps Involved:
-  1. Data Collection (Web Scraping) --> Created index of Open datasets from official website of [Peru Government](https://www.datosabiertos.gob.pe/) 
+  1. [Data Collection (Web Scraping)](https://github.com/Safrin03/Lima-Chapter-Project/tree/main/Data%20Collection%20(Web%20Scraping)) --> Created index of Open datasets from official website of [Peru Government](https://www.datosabiertos.gob.pe/) 
   2. Data Cleaning -- > Handled large datasets, inconsistencies
   3. Data Analysis -- > Descriptive Analysis, Exploratory Data Analysis
   4. Data Visualization -- > Created interactive streamlit web app dashboard 
 
 ## Datasets:
-1. **Revenue Collected from the District Municipality of Santa Anita 2023**
+1. [**Revenue Collected from the District Municipality of Santa Anita 2023**](https://github.com/Safrin03/Lima-Chapter-Project/blob/main/Data%20Analysis/Revenue%20Collected%20from%20the%20District%20Municipality%20of%20Santa%20Anita%202023%20.ipynb)
 2. **Ministry of Production - PRODUCE**
-    1) **Directory of Large Companies in the Manufacturing Sector - [Ministry of Production - PRODUCE]**
-    2) **Directory of MSME Companies by productive sector**
-3. **Monthly Average of Private Sector Workers by Pension Scheme, According to Districts - [Ministry of Labor and Employment Promotion - MTPE]**
-4. **Income Collected from the District Municipality of San Juan de Miraflores – [MDSJM]**
-5. **Income collected from the District Municipality of Pucusana** 
-6. **Investment Projects of the Regional Government of Lima**
+    1) [**Directory of Large Companies in the Manufacturing Sector - [Ministry of Production - PRODUCE]**](https://github.com/Safrin03/Lima-Chapter-Project/blob/main/Data%20Analysis/Directory%20of%20Large%20Companies%20in%20the%20Manufacturing%20sector%202021.ipynb)
+    2) [**Directory of MSME Companies by productive sector**](https://github.com/Safrin03/Lima-Chapter-Project/blob/main/Data%20Analysis/Directory%20of%20MSME%20Companies%20by%20productive%20sector%202021.ipynb)
+3. [**Monthly Average of Private Sector Workers by Pension Scheme, According to Districts - [Ministry of Labor and Employment Promotion - MTPE]**](https://github.com/Safrin03/Lima-Chapter-Project/blob/main/Data%20Analysis/Monthly%20average%20of%20Private%20sector%20Workers%20by%20Pension%20Scheme%2C%20according%20to%20districts%20-%202021%20%5BMTPE%5D.ipynb)
+4. [**Income Collected from the District Municipality of San Juan de Miraflores – [MDSJM]**](https://github.com/Safrin03/Lima-Chapter-Project/blob/main/Data%20Analysis/Income%20Collected%20from%20the%20District%20Municipality%20of%20San%20Juan%20de%20Miraflores.ipynb)
+5. [**Income collected from the District Municipality of Pucusana** ](https://github.com/Safrin03/Lima-Chapter-Project/blob/main/Data%20Analysis/Income%20Collected%20from%20the%20District%20Municipality%20of%20Pucusana%202022.ipynb)
+6. [**Investment Projects of the Regional Government of Lima**](https://github.com/Safrin03/Lima-Chapter-Project/blob/main/Data%20Analysis/Investment%20Projects%20of%20the%20Regional_Government_of_Lima.ipynb)
 
 ## Overall Insights of Lima's Economy :
 ### 1. **Population:**
