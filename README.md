@@ -1,6 +1,8 @@
 # "ProsperaLima: Unveiling Economic Insights of Lima Metropolitan Area"
 
-### [Omdena Project Link](https://omdena.com/chapter-challenges/analyzing-open-data-to-drive-positive-change-in-lima/#) | [Google Drive Link to Datasets](https://drive.google.com/drive/folders/1Pfo5VYQxR4gUG3RB4lB8kHdWwMME2awh?usp=drive_link)
+### [ProsperaLima Streamlit Web App Dashboard](https://prosperalima-chapter-project-omdena.streamlit.app/) | [Omdena Project Link](https://omdena.com/chapter-challenges/analyzing-open-data-to-drive-positive-change-in-lima/#) | [Google Drive Link to Datasets](https://drive.google.com/drive/folders/1Pfo5VYQxR4gUG3RB4lB8kHdWwMME2awh?usp=drive_link)
+
+<img src="Images/Lima City Picture.jpeg">
 
 ## Steps Involved:
   1. [Data Collection (Web Scraping)](https://github.com/Safrin03/Lima-Chapter-Project/tree/main/Data%20Collection%20(Web%20Scraping)) --> Created index of Open datasets from official website of [Peru Government](https://www.datosabiertos.gob.pe/) 
@@ -17,6 +19,7 @@
 4. [**Income Collected from the District Municipality of San Juan de Miraflores – [MDSJM]**](https://github.com/Safrin03/Lima-Chapter-Project/blob/main/Data%20Analysis/Income%20Collected%20from%20the%20District%20Municipality%20of%20San%20Juan%20de%20Miraflores.ipynb)
 5. [**Income collected from the District Municipality of Pucusana** ](https://github.com/Safrin03/Lima-Chapter-Project/blob/main/Data%20Analysis/Income%20Collected%20from%20the%20District%20Municipality%20of%20Pucusana%202022.ipynb)
 6. [**Investment Projects of the Regional Government of Lima**](https://github.com/Safrin03/Lima-Chapter-Project/blob/main/Data%20Analysis/Investment%20Projects%20of%20the%20Regional_Government_of_Lima.ipynb)
+
 
 ## Overall Insights of Lima's Economy :
 ### 1. **Population:**
