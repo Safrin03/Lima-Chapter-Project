@@ -198,13 +198,17 @@ with col2:
             # GitHub Logo
             github_logo = r"Images/Github logo.png"
             github_link="https://github.com/Safrin03/Lima-Chapter-Project"
-            st.image(github_logo, width=50, caption="GitHub Logo")
-            st.markdown(f"[GitHub Repo link]({github_link})")
             # Omdena Logo
             omdena_logo = r"Images/Omdena Logo.jpeg"
-            omdena_link = "https://omdena.com/chapter-challenges/analyzing-open-data-to-drive-positive-change-in-lima/#"           
-            st.image(omdena_logo, width=55, caption="Omdena Logo")
-            st.markdown(f"[Omdena Project link]({omdena_link})")
+            omdena_link = "https://omdena.com/chapter-challenges/analyzing-open-data-to-drive-positive-change-in-lima/#"          
+
+            logo1, logo2 = st.columns(2)
+            with logo1: 
+                st.image(github_logo, width=50, caption="GitHub Logo")
+                st.markdown(f"[GitHub Repo link]({github_link})")     
+            with logo2:
+                st.image(omdena_logo, width=55, caption="Omdena Logo")
+                st.markdown(f"[Omdena Project link]({omdena_link})")
 
         with tab2:
             st.header("Population Info")
