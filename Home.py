@@ -270,125 +270,126 @@ with col2:
                     """,
                     unsafe_allow_html=True,
                 )
-                # Infrastructure Development Section
-                infrastructure_title = "Infrastructure Development:"
-                infrastructure_content = """ 
-                **Issue:**
-                - Lima faces challenges in terms of traffic congestion and limited public transportation.
+                
+            # Infrastructure Development Section
+            infrastructure_title = "Infrastructure Development:"
+            infrastructure_content = """ 
+            **Issue:**
+            - Lima faces challenges in terms of traffic congestion and limited public transportation.
 
-                **Recommendation:**
-                - Invest in comprehensive infrastructure projects, focusing on transportation, sanitation, health, telecommunications, and water. Implement the National Plan of Infrastructure for Competitiveness to bridge the infrastructure gaps.
-                """
+            **Recommendation:**
+            - Invest in comprehensive infrastructure projects, focusing on transportation, sanitation, health, telecommunications, and water. Implement the National Plan of Infrastructure for Competitiveness to bridge the infrastructure gaps.
+            """
 
-                display_section(infrastructure_title, infrastructure_content, color="#b3ccff")
+            display_section(infrastructure_title, infrastructure_content, color="#b3ccff")
 
-                # Informal Settlements and Social Inequality Section
-                informal_settlements_title = "Informal Settlements and Social Inequality:"
-                informal_settlements_content = """ 
-                **Issue:**
-                - A significant portion of Lima's population lives in informal settlements, and social disparities exist.
+            # Informal Settlements and Social Inequality Section
+            informal_settlements_title = "Informal Settlements and Social Inequality:"
+            informal_settlements_content = """ 
+            **Issue:**
+            - A significant portion of Lima's population lives in informal settlements, and social disparities exist.
 
-                **Recommendation:**
-                - Implement inclusive urban development strategies to provide proper infrastructure and services to informal settlements. Develop social programs and initiatives to address inequality and improve living conditions for all residents.
-                """
+            **Recommendation:**
+            - Implement inclusive urban development strategies to provide proper infrastructure and services to informal settlements. Develop social programs and initiatives to address inequality and improve living conditions for all residents.
+            """
 
-                display_section(informal_settlements_title, informal_settlements_content, color="#d9ead3")
+            display_section(informal_settlements_title, informal_settlements_content, color="#d9ead3")
 
-                # Environmental Sustainability Section
-                environmental_sustainability_title = "Environmental Sustainability:"
-                environmental_sustainability_content = """ 
-                **Issue:**
-                - Lima faces challenges related to air pollution, waste management, and water scarcity.
+            # Environmental Sustainability Section
+            environmental_sustainability_title = "Environmental Sustainability:"
+            environmental_sustainability_content = """ 
+            **Issue:**
+            - Lima faces challenges related to air pollution, waste management, and water scarcity.
 
-                **Recommendation:**
-                - Implement sustainable practices to reduce air pollution, increase waste recycling, and improve water management. Invest in green infrastructure projects and promote environmental awareness among the population.
-                """
+            **Recommendation:**
+            - Implement sustainable practices to reduce air pollution, increase waste recycling, and improve water management. Invest in green infrastructure projects and promote environmental awareness among the population.
+            """
 
-                display_section(environmental_sustainability_title, environmental_sustainability_content, color="#ffd699")
+            display_section(environmental_sustainability_title, environmental_sustainability_content, color="#ffd699")
 
-                # Diversification of the Economy Section
-                economy_diversification_title = "Diversification of the Economy:"
-                economy_diversification_content = """ 
-                **Issue:**
-                - Lima's economy is heavily reliant on industrial and manufacturing sectors.
+            # Diversification of the Economy Section
+            economy_diversification_title = "Diversification of the Economy:"
+            economy_diversification_content = """ 
+            **Issue:**
+            - Lima's economy is heavily reliant on industrial and manufacturing sectors.
 
-                **Recommendation:**
-                - Encourage diversification by promoting sectors such as technology, innovation, and services. Foster an environment that supports startups and small businesses to contribute to economic variety.
-                """
+            **Recommendation:**
+            - Encourage diversification by promoting sectors such as technology, innovation, and services. Foster an environment that supports startups and small businesses to contribute to economic variety.
+            """
 
-                display_section(economy_diversification_title, economy_diversification_content, color="#c2d8c2")
+            display_section(economy_diversification_title, economy_diversification_content, color="#c2d8c2")
 
-                # Education and Workforce Development Section
-                education_workforce_title = "Education and Workforce Development:"
-                education_workforce_content = """ 
-                **Issue:**
-                - Despite being an economic hub, there are challenges related to employment, underemployment, and informal businesses.
+            # Education and Workforce Development Section
+            education_workforce_title = "Education and Workforce Development:"
+            education_workforce_content = """ 
+            **Issue:**
+            - Despite being an economic hub, there are challenges related to employment, underemployment, and informal businesses.
 
-                **Recommendation:**
-                - Invest in education and vocational training programs to enhance the skills of the workforce. Promote formal employment through regulatory measures and incentives for businesses.
-                """
+            **Recommendation:**
+            - Invest in education and vocational training programs to enhance the skills of the workforce. Promote formal employment through regulatory measures and incentives for businesses.
+            """
 
-                display_section(education_workforce_title, education_workforce_content, color="#f0d6b4")
+            display_section(education_workforce_title, education_workforce_content, color="#f0d6b4")
 
-                # Corruption and Governance Section
-                corruption_governance_title = "Corruption and Governance:"
-                corruption_governance_content = """ 
-                **Issue:**
-                - Corruption is a pervasive challenge that affects trust in institutions and economic growth.
+            # Corruption and Governance Section
+            corruption_governance_title = "Corruption and Governance:"
+            corruption_governance_content = """ 
+            **Issue:**
+            - Corruption is a pervasive challenge that affects trust in institutions and economic growth.
 
-                **Recommendation:**
-                - Strengthen anti-corruption measures and promote transparent governance. Implement reforms to streamline bureaucratic processes and enhance accountability in public and private sectors.
-                """
+            **Recommendation:**
+            - Strengthen anti-corruption measures and promote transparent governance. Implement reforms to streamline bureaucratic processes and enhance accountability in public and private sectors.
+            """
 
-                display_section(corruption_governance_title, corruption_governance_content, color="#e3e3e3")
+            display_section(corruption_governance_title, corruption_governance_content, color="#e3e3e3")
 
-                # Export Diversification Section
-                export_diversification_title = "Export Diversification:"
-                export_diversification_content = """ 
-                **Issue:**
-                - While Lima has a strong export industry, there is room for diversification.
+            # Export Diversification Section
+            export_diversification_title = "Export Diversification:"
+            export_diversification_content = """ 
+            **Issue:**
+            - While Lima has a strong export industry, there is room for diversification.
 
-                **Recommendation:**
-                - Explore opportunities to diversify export goods and markets. Support research and development in industries with export potential, and leverage trade agreements to expand market reach.
-                """
+            **Recommendation:**
+            - Explore opportunities to diversify export goods and markets. Support research and development in industries with export potential, and leverage trade agreements to expand market reach.
+            """
 
-                display_section(export_diversification_title, export_diversification_content, color="#a6d6d6")
+            display_section(export_diversification_title, export_diversification_content, color="#a6d6d6")
 
-                # Social Protection and Poverty Alleviation Section
-                social_protection_title = "Social Protection and Poverty Alleviation:"
-                social_protection_content = """ 
-                **Issue:**
-                - Poverty rates persist, and social protection measures may need improvement.
+            # Social Protection and Poverty Alleviation Section
+            social_protection_title = "Social Protection and Poverty Alleviation:"
+            social_protection_content = """ 
+            **Issue:**
+            - Poverty rates persist, and social protection measures may need improvement.
 
-                **Recommendation:**
-                - Enhance social protection programs, including reforms in the pension system. Ensure more equitable distribution of resources and benefits across different regions to reduce poverty.
-                """
+            **Recommendation:**
+            - Enhance social protection programs, including reforms in the pension system. Ensure more equitable distribution of resources and benefits across different regions to reduce poverty.
+            """
 
-                display_section(social_protection_title, social_protection_content, color="#f9e4b7")
+            display_section(social_protection_title, social_protection_content, color="#f9e4b7")
 
-                # Collaboration between Districts Section
-                collaboration_districts_title = "Collaboration between Districts:"
-                collaboration_districts_content = """ 
-                **Issue:**
-                - Administrative divisions among districts can hinder city-wide projects.
+            # Collaboration between Districts Section
+            collaboration_districts_title = "Collaboration between Districts:"
+            collaboration_districts_content = """ 
+            **Issue:**
+            - Administrative divisions among districts can hinder city-wide projects.
 
-                **Recommendation:**
-                - Foster collaboration among districts for coordinated development projects. Streamline administrative processes to facilitate cross-district initiatives.
-                """
+            **Recommendation:**
+            - Foster collaboration among districts for coordinated development projects. Streamline administrative processes to facilitate cross-district initiatives.
+            """
 
-                display_section(collaboration_districts_title, collaboration_districts_content, color="#c2d8c2")
+            display_section(collaboration_districts_title, collaboration_districts_content, color="#c2d8c2")
 
-                # Innovation and Technology Adoption Section
-                innovation_technology_title = "Innovation and Technology Adoption:"
-                innovation_technology_content = """ 
-                **Issue:**
-                - Lima may benefit from increased innovation and technology adoption.
+            # Innovation and Technology Adoption Section
+            innovation_technology_title = "Innovation and Technology Adoption:"
+            innovation_technology_content = """ 
+            **Issue:**
+            - Lima may benefit from increased innovation and technology adoption.
 
-                **Recommendation:**
-                - Support initiatives that promote innovation and technology integration across various sectors. Encourage businesses to adopt digitalization for improved services and efficiencies.
-                """
+            **Recommendation:**
+            - Support initiatives that promote innovation and technology integration across various sectors. Encourage businesses to adopt digitalization for improved services and efficiencies.
+            """
 
-                display_section(innovation_technology_title, innovation_technology_content, color="#d9ead3")
+            display_section(innovation_technology_title, innovation_technology_content, color="#d9ead3")
 
 
                     
