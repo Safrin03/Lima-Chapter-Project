@@ -2,6 +2,8 @@
 
 ### [ProsperaLima Streamlit Web App Dashboard](https://prosperalima-chapter-project-omdena.streamlit.app/) | [Omdena Project Link](https://omdena.com/chapter-challenges/analyzing-open-data-to-drive-positive-change-in-lima/#) | [Google Drive Link to Datasets](https://drive.google.com/drive/folders/1Pfo5VYQxR4gUG3RB4lB8kHdWwMME2awh?usp=drive_link)
 
+### [LinkedIn Post Link](https://www.linkedin.com/posts/safrin-s_omdenalimaperu-lima-peru-activity-7146912090799112192-6RBy?utm_source=share&utm_medium=member_desktop)
+
 <img src="Images/Lima City Picture.jpeg">
 
 ## Steps Involved:
