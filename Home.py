@@ -19,9 +19,9 @@ dataset_url = r"Datasets/Population.csv"
 
 
 
-# @st.cache_data
 # read csv from a URL
-@st.cache
+# @st.cache
+@st.cache_data
 def get_data() -> pd.DataFrame:
     return pd.read_csv(dataset_url)
 
